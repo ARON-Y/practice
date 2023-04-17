@@ -17,3 +17,96 @@ a {
   top: -999999px;
   opacity: 0;
 }
+
+#news {
+  width: 100%;
+  height: 100vh;
+  padding: 300px 0;
+  background-color: #777;
+
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    h1 {
+      font: 50px/1 "arial";
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
+    }
+    .circle {
+      // overflow: hidden;
+
+      .box1 {
+        width: 2000px;
+        height: 2000px;
+        border-radius: 50%;
+        background-color: green;
+        position: absolute;
+        top: -100%;
+        left: -30%;
+      }
+
+      .box2 {
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-color: orange;
+        position: absolute;
+        top: -120%;
+        left: -50%;
+      }
+    }
+
+    .wrap {
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      article {
+        width: 280px;
+        padding: 30px 10px;
+        margin-right: 20px;
+        float: left;
+        background-color: #fff;
+        position: relative;
+
+        &:last-of-type {
+          margin-right: 0px;
+        }
+
+        .pic {
+          width: 100%;
+          margin-bottom: 20px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        h2 {
+          font: bold 18px/1 "arial";
+          color: #000;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font: 15px/1 "arial";
+          color: #000;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
